@@ -1,6 +1,5 @@
 package com.example.statuslar.ui.viewModel.impl
 
-import android.util.Log
 import androidx.lifecycle.*
 import com.example.statuslar.data.model.Event
 import com.example.statuslar.data.source.local.room.entity.SpeachEnity

@@ -41,8 +41,8 @@ class ItemSpeachFragment : Fragment(R.layout.layout_speach) {
             findNavController().navigateUp()
         }
     }
-    private var loadItemsObserver = Observer<Event<SpeachEnity>> {
-        loadObserverOnlyOneTime(it) {
+    private var loadItemsObserver = Observer<Event<SpeachEnity>> { event ->
+        loadObserverOnlyOneTime(event) {
             binding?.editText?.setText(it.text)
             when (it.favourite) {
                 0 -> {

@@ -1,7 +1,5 @@
 package com.example.statuslar.ui.viewModel.impl
 
-
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -62,7 +60,6 @@ class WiseManViewModel_Impl @Inject constructor(private var useCase: WiseManUseC
         data.pathId = wiseMan.pathId
         data.imageId = wiseMan.imageId
         useCase.add(data).onEach {
-            Log.d("TTT", wiseMan.imageId.toString())
             if (it) {
                 _closeLiveData.postValue(Event(Unit))
             } else {

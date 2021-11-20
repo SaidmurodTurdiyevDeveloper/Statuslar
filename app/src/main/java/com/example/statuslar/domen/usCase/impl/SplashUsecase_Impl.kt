@@ -1,6 +1,5 @@
 package com.example.statuslar.domen.usCase.impl
 
-import android.util.Log
 import com.example.statuslar.domen.repostory.SplashRepostory
 import com.example.statuslar.domen.usCase.SplashUseCase
 import kotlinx.coroutines.delay
@@ -15,7 +14,6 @@ class SplashUsecase_Impl @Inject constructor(private var repostory: SplashRepost
         repostory.isFirst().collect { event ->
             if (event) {
                 repostory.getEmptyWiseIdSpeches().collect {
-                    Log.d("TTT","${it.size} ta element o`chdi ")
                     delay(1000)
                     emit(repostory.deleteEmpty(it) > 0)
                 }

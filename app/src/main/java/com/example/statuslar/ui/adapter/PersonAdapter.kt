@@ -1,14 +1,11 @@
 package com.example.statuslar.ui.adapter
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.statuslar.R
 import com.example.statuslar.data.model.Person
-import com.example.statuslar.databinding.PersonItemBinding
 import com.example.statuslar.zZz_utills.extentions.inflate
 import de.hdodenhof.circleimageview.CircleImageView
 
