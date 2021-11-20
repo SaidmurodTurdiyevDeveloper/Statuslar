@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="24dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/item_speach_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text_item_speach"
+                    style="@style/TextAppearance.AppCompat.MyTextSyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/la_belle_aurore"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/fawouriteItem"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:lottie_colorFilter="@color/orange"
+                    app:lottie_rawRes="@raw/favourite" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/deleteitem"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    app:lottie_colorFilter="@color/red"
+                    app:lottie_rawRes="@raw/delete" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/addItemLottie"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/create_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/background_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80A38423"
+            android:orientation="horizontal" />
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

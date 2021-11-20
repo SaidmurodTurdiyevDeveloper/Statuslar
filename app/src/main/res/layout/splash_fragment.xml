@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/blur_splash"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#33000000"
+        android:layout_height="match_parent"/>
+
+    <com.agrawalsuneet.dotsloader.loaders.PullInLoader
+        android:id="@+id/dotsloder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:pullin_animDur="2000"
+        app:pullin_bigCircleRadius="25dp"
+        app:pullin_colorsArray="@array/vibgyorg"
+        app:pullin_dotsColor="@color/blue_selected"
+        app:pullin_dotsRadius="4dp"
+        app:pullin_useMultipleColors="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

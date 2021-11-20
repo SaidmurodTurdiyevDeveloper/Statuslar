@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Statuslar</string>
+    <string name="text_info_layout">Bu dastur davomida siz turli buyuk insonlarning eng sara gaplarini topishingiz ularni baxolashingiz mumkin bo`ladi.\nYana bu dasturda siz yangi gaplar topib olsangiz ularni dasturga qo`shishingiz hamda o`zingizning yangi doxiyona gaplaringizni saqlab qo`yishingiz, ularni taxrirlashingiz mumkin bo`ladi.\n\nAgar dasturda muammolar chiqsa quydagi manzilga murojat qiling</string>
+    <string name="gmail">saidmurod5turdiyev@gmail.com</string>
+    <string name="hikmatlar">Hikmatlar</string>
+    <string name="dastur_haqida">dastur haqida</string>
+    <string name="chiqish">chiqish</string>
+    <string name="todo">TODO</string>
+    <string name="yangi_yaratish">yangi yaratish</string>
+    <string name="text">text</string>
+    <string name="hikmatlar_xazinasi">Hikmatlar Xazinasi</string>
+    <string name="xabar">Xabar</string>
+    <string name="saqlash">saqlash</string>
+    <string name="ochirish">O`chirish</string>
+    <string name="motivator">Motivator</string>
+    <string name="name_motivator">Motivator ismi</string>
+    <string name="havola">Havola</string>
+    <string name="nima_haqida">Nima haqida</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+</resources>

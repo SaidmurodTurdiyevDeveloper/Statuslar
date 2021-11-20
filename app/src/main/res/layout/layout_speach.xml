@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud_one"
+    app:layoutDescription="@xml/layout_speach_scene">
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4D000000"
+        android:elevation="1dp"
+        android:orientation="horizontal" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="2dp"
+        app:titleTextColor="@color/white">
+
+        <ImageButton
+            android:id="@+id/backbutton"
+            style="@style/buttonBuckgrondWithBorderless"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_back"
+            app:layout_collapseMode="pin"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="13dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageTop"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center|end"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/todo"
+        android:elevation="2dp"
+        android:src="@drawable/image1"
+        app:layout_constraintBottom_toBottomOf="@id/appBar"
+        app:layout_constraintRight_toRightOf="@id/appBar"
+        app:layout_constraintTop_toTopOf="@id/appBar"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="#00000000"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linerlayot"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="#033747"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/nestedScrollView"
+        app:layout_constraintTop_toTopOf="@id/nestedScrollView" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/layout_bcg"
+        android:elevation="3dp"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameEditextLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageView"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="110dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:hint="@string/text"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#FFFFFF"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/delete"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="8dp"
+                    app:lottie_colorFilter="@color/pink_selected"
+                    app:lottie_rawRes="@raw/delete" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/doneItem"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:lottie_rawRes="@raw/done" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/raund"
+        android:elevation="5dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@id/nestedScrollView"
+        app:layout_constraintRight_toRightOf="@id/nestedScrollView"
+        app:layout_constraintTop_toTopOf="@id/nestedScrollView">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/favourite"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:lottie_colorFilter="@color/orange"
+            app:lottie_rawRes="@raw/favourite"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+    </FrameLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
