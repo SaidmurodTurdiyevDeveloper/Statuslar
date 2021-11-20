@@ -1,6 +1,7 @@
 package com.example.statuslar.ui.viewModel.impl
 
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,7 +21,7 @@ import javax.inject.Inject
 @HiltViewModel
 class WiseManViewModel_Impl @Inject constructor(private var useCase: WiseManUseCase) :
     ViewModel(), WiseManViewModel {
-    private var wiseMan = WiseManEntity(-1, "None", "none", "none", "", 0)
+    private var wiseMan = WiseManEntity(-1, "None", "none", "none", "", -1)
 
     private val _closeLiveData = MutableLiveData<Event<Unit>>()
     override val closeLiveData: LiveData<Event<Unit>> get() = _closeLiveData
@@ -61,6 +62,7 @@ class WiseManViewModel_Impl @Inject constructor(private var useCase: WiseManUseC
         data.pathId = wiseMan.pathId
         data.imageId = wiseMan.imageId
         useCase.add(data).onEach {
+            Log.d("TTT", wiseMan.imageId.toString())
             if (it) {
                 _closeLiveData.postValue(Event(Unit))
             } else {
@@ -90,7 +92,7 @@ class WiseManViewModel_Impl @Inject constructor(private var useCase: WiseManUseC
     }
 
     override fun setImageInt(data: Person) {
-        wiseMan.imageId = data.resId
+        wiseMan.imageId = data.id
         _loadImageResIdLiveData.value = Event(data)
     }
 }

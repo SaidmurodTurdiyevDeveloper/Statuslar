@@ -4,7 +4,6 @@ import android.Manifest
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -167,12 +166,7 @@ class AddWiseManFragment : Fragment(R.layout.wise_man_layout) {
         binding?.backbutton?.setOnClickListener {
             viewModel.close()
         }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                viewModel.close()
-            }
 
-        })
         binding?.doneButton?.setOnClickListener {
             editTextDone(true)
         }
